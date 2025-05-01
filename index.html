@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List & Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List & Notes</h1>
+        <p>💰 <strong>Coins:</strong> <span id="coinCount">0</span></p>
+        <p>🏆 <strong>Level:</strong> <span id="level">1</span></p>
+        <p>🎖 <strong>Streak:</strong> <span id="streak">0</span></p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <!-- Notes Section -->
+        <h2>Notes</h2>
+        <textarea id="noteInput" placeholder="Write a note..."></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <button onclick="startVoiceInput('note')">🎙 Voice Input</button>
+        <ul id="noteList"></ul>
+
+        <!-- To-Do Section -->
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Enter a task">
+        <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <button onclick="addTodo()">Add To-Do</button>
+        <button onclick="startVoiceInput('task')">🎙 Voice Input</button>
+        <ul id="todoList"></ul>
+
+        <button onclick="redeemReward()">Redeem Reward (10 Coins)</button>
+
+        <!--remainder-->
+        <input type="datetime-local" id="reminderTime" />
+<button onclick="addTask()">Add Task</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
